@@ -2,4 +2,6 @@
 
 ## Running the consumer
 
-`docker run -e SIGNALWIRE_PROJECT=<YOUR PROJECT> -e SIGNALWIRE_TOKEN=<YOUR TOKEN> -e ENABLE_DEBUG=true relay-node`
+
+`docker build . -t relay-node`
+`docker run -e SIGNALWIRE_PROJECT_KEY=<YOUR PROJECT> -e SIGNALWIRE_TOKEN=<YOUR TOKEN> -e ENABLE_DEBUG=true relay-node`
