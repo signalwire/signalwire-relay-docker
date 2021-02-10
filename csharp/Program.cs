@@ -7,19 +7,16 @@ namespace ConsumerExample
     {
         static void Main(string[] args)
         {
-            Task.Run(() => {
-                var pc = new PhoneConsumer
+	        var pc = new PhoneConsumer
                 {
-                    Project = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
-                    Token = "PTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                    Project = Environment.GetEnvironmentVariable("SW_PROJECT"),
+                    Token = Environment.GetEnvironmentVariable("SW_TOKEN"),
 
-                    Contexts = new System.Collections.Generic.List<string>() { "ExampleContext" }
+                    Contexts = new System.Collections.Generic.List<string>() { Environment.GetEnvironmentVariable("SW_CONTEXT") }
                 };
+		Console.WriteLine("Listening for context: ");
+		Console.WriteLine(Environment.GetEnvironmentVariable("SW_CONTEXT"));
                 pc.Run();
-     
-            });
-            Console.WriteLine("Running...");
-            Console.ReadKey();
         }
     }
 }
