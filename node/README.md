@@ -26,7 +26,7 @@ Take a look at the logs in your console to find out what Relay JSON looks like.
 
 If you would like to modify the consumer to explore the different Relay features, you don't need rebuild the image. You can simply run the container while mounting the consumer file to `/app/consumer.js`.
 
-`docker run -e SIGNALWIRE_PROJECT_KEY=<YOUR PROJECT> -e SIGNALWIRE_TOKEN=<YOUR TOKEN> -e ENABLE_DEBUG=true  -v "/path/to/your/consumer.rb:/app/consumer.rb" signalwire/relay-example-node`
+`docker run -e SIGNALWIRE_PROJECT_KEY=<YOUR PROJECT> -e SIGNALWIRE_TOKEN=<YOUR TOKEN> -e ENABLE_DEBUG=true  -v "/path/to/your/consumer.js:/app/consumer.js" signalwire/relay-example-node`
 
 ## Building your own image
 
