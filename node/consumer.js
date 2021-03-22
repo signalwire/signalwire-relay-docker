@@ -5,7 +5,7 @@ const consumer = new RelayConsumer({
   token: process.env.SIGNALWIRE_TOKEN,
   contexts: ['office'],
 
-  setup: async ({ client }) => {
+  ready: async ({ client }) => {
     if (process.env.ENABLE_DEBUG) { 
       client.__logger.setLevel(client.__logger.levels.DEBUG)
     }
