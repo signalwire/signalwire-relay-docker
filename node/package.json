@@ -10,6 +10,10 @@
   "author": "Luca Pradovera <luca@signalwire.com>",
   "license": "ISC",
   "dependencies": {
-    "@signalwire/node": "^2.3.3"
+    "@signalwire/node": "2.6.0"
+  },
+  "overrides": {
+    "jsonwebtoken": "9.0.0",
+    "axios": "1.6.0"
   }
 }
